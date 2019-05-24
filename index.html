@@ -203,7 +203,15 @@
     {
         liff.sendMessages([{
             type: 'text',
-            text: "Hello Skr~~"
+            text: userId
+        }]).then(function () {
+            window.alert("Message sent");
+        }).catch(function (error) {
+            window.alert("Error sending message: " + error);
+        });
+		liff.sendMessages([{
+            type: 'text',
+            text: pic
         }]).then(function () {
             window.alert("Message sent");
         }).catch(function (error) {
